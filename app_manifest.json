@@ -1,0 +1,27 @@
+{
+  "SchemaVersion": 1,
+  "Name": "DeferredUpdate",
+  "ComponentId": "541fc56d-1da1-452b-b0d3-dcac70700f59",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [],
+  "Capabilities": {
+    "Gpio": [
+      "$MT3620_RDB_BUTTON_A",
+      "$MT3620_RDB_BUTTON_B",
+      "$MT3620_RDB_LED1_RED",
+      "$MT3620_RDB_LED1_GREEN",
+      "$MT3620_RDB_LED1_BLUE",
+      "$MT3620_RDB_LED2_BLUE"
+    ],
+    "Uart": [
+      "$MT3620_RDB_HEADER2_ISU0_UART"
+    ],
+    "Adc": [ 
+      "$MT3620_RDB_ADC_CONTROLLER0" 
+    ],
+    "SystemEventNotifications": true,
+    "SoftwareUpdateDeferral": true
+  },
+  "ApplicationType": "Default",
+  "MallocVersion": 2
+}
