@@ -27,7 +27,7 @@ int LedBlueFd = -1;
 int buttonA = -1;
 int buttonB = -1;
 
-static GPIO_Value buttonState = GPIO_Value_High;
+static GPIO_Value buttonStateA = GPIO_Value_High, buttonStateB = GPIO_Value_High;
 /******************************************************************************
 * Definicion de funciones
 *******************************************************************************/
@@ -116,22 +116,22 @@ void ButtonTimerEventHandler(EventLoopTimer *timer)
 
     //Lectura del boton A
     //Logica Pullup
-    if (A != buttonState) {
+    if (A != buttonStateA) {
         if(A == GPIO_Value_Low){
             SendUartMessage(uart, "Boton A \n");
             Log_Debug("Boton A \n");
         }
-        A = buttonState;
+        buttonStateA = A;
     }
 
     //Lectura del boton B
     //Logica Pullup
-    if (B != buttonState) {
+    if (B != buttonStateB) {
         if(B == GPIO_Value_Low){
             SendUartMessage(uart, "Boton B \n");
             Log_Debug("Boton B \n");
         }
-        B = buttonState;
+        buttonStateB = B;
     }
 
 }
