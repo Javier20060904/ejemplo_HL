@@ -1,6 +1,6 @@
 {
   "SchemaVersion": 1,
-  "Name": "DeferredUpdate",
+  "Name": "GPIO_ADC_Ejemplo",
   "ComponentId": "541fc56d-1da1-452b-b0d3-dcac70700f59",
   "EntryPoint": "/bin/app",
   "CmdArgs": [],

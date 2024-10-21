@@ -25,7 +25,6 @@
 EventLoop *eventLoop = NULL;
 EventLoopTimer *buttonPollTimer = NULL;
 EventLoopTimer *adcPollTimer = NULL;
-EventRegistration *updateEventReg = NULL;
 
 /******************************************************************************
 * Definicion de funciones
@@ -96,7 +95,7 @@ void TerminationHandler(int signalNumber)
 void FreeSysEventHandler(void)
 {
     DisposeEventLoopTimer(buttonPollTimer);
-    SysEvent_UnregisterForEventNotifications(updateEventReg);
+    DisposeEventLoopTimer(adcPollTimer);
     EventLoop_Close(eventLoop);
 }
 
